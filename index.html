@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Frontend Mentor | Tip calculator app</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <link rel="stylesheet" href="src/styles/index.css" />
+
+        <script defer src="src/app/app.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">SPLI<br />TTER</h1>
+        </header>
+
+        <main class="main">
+            <div class="main__form">
+                <div class="main__bill">
+                    <h2 class="subtitleOption">Bill</h2>
+
+                    <img src="src/images/icon-dollar.svg" class="main__icon" />
+                    <input type="number" class="inputOption" placeholder="0" id="bill" />
+                </div>
+
+                <div class="main__tipOptions">
+                    <h3 class="subtitleOption">Select Tip %</h3>
+                    <div class="main__actions">
+                        <button class="btnOptionTip" data-tip="0.05">5%</button>
+                        <button class="btnOptionTip" data-tip="0.10">10%</button>
+                        <button class="btnOptionTip" data-tip="0.15">15%</button>
+                        <button class="btnOptionTip" data-tip="0.25">25%</button>
+                        <button class="btnOptionTip" data-tip="0.50">50%</button>
+                        <input type="text" class="main__inputCustomTip" placeholder="Custom" id="customTip" />
+                    </div>
+                </div>
+
+                <div class="main__amountPeople">
+                    <div class="main__headerAmountPeople">
+                        <h4 class="subtitleOption">Number of people</h4>
+                        <p class="main__msgError" id="error-msg">Can't be zero</p>
+                    </div>
+                    <img src="src/images/icon-person.svg" class="main__icon" />
+                    <input type="number" class="inputOption" placeholder="0" id="countPeople" />
+                </div>
+            </div>
+
+            <div class="main__results">
+                <div class="main__resultsList">
+                    <div class="resultItem">
+                        <h5 class="resultItem__title">
+                            Tip Amount <br />
+                            <span class="resultItem__subTitle">/ person</span>
+                        </h5>
+                        <p class="resultItem__amount" id="total-tip">$0.00</p>
+                    </div>
+                    <div class="resultItem">
+                        <h5 class="resultItem__title">
+                            Total <br />
+                            <span class="resultItem__subTitle">/ person</span>
+                        </h5>
+                        <p class="resultItem__amount" id="total-person">$0.00</p>
+                    </div>
+                </div>
+
+                <button class="main__resultsReset" id="btn-reset-result">RESET</button>
+            </div>
+        </main>
+    </body>
+</html>
